@@ -40,6 +40,8 @@ var MOCK_STATUS_UPDATES = {
 // use jQuery's AJAX functionality to make a call
 // to the server and then run the callbackFn
 function getRecentStatusUpdates(callbackFn) {
+    // we use a `setTimeout` to make this asynchronous
+    // as it would be with a real AJAX call.
 	setTimeout(function(){ callbackFn(MOCK_STATUS_UPDATES)}, 1);
 }
 
